@@ -9,7 +9,7 @@ app.use(cors())
 app.use(express.json())
 
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.stybsc2.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DBB_USER}:${process.env.DBB_PASSWORD}@cluster0.stybsc2.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 const foodCollection = client.db('FoodDb').collection('Foods')
